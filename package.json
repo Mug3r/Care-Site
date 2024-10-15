@@ -1,0 +1,23 @@
+{
+  "name": "care-site",
+  "version": "0.0.1",
+  "description": "onpoint care site",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mug3r/Care-site.git"
+  },
+  "author": "Ezra Mugadza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mug3r/Care-site/issues"
+  },
+  "homepage": "https://github.com/Mug3r/Care-site#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
