@@ -96,12 +96,16 @@ nav ul li a {
   position: relative;
   text-align: center;
   color: white;
-  background-image: url('img/Banner.jpg'); /* Desktop background image */
-  background-size: cover;
-  background-position: center;
   border-radius: 9px;
-  background-color: #f4f4f4; /* Fallback color to verify section */
-  min-height: 300px; /* Ensures section height is maintained */
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+  background-image: url('img/Banner.jpg'); /* Desktop background image */
+  background-size: auto; /* Keep original size */
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image */
+  background-color: rgb(216, 211, 205); /* Fallback color for uncovered areas */
+  min-height: 400px; /* Ensures section height is maintained */
 }
 
 
@@ -281,8 +285,15 @@ footer ul li a {
 
   .hero {
     background-image: url('img/Banner-mobile.jpg'); /* Mobile background image */
-    height: 300px; /* Adjust as needed for mobile */
-  }
+    min-height: 300px; /* Ensures section height for mobile */
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-size: auto; /* Keep original size */
+    background-color: rgb(216, 211, 205);
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+}
 
   /* Responsive Font Sizes */
   body {
