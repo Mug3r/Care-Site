@@ -6,44 +6,50 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>OnPoint Domiciliary Care Services</title>
   <link rel="stylesheet" href="res/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
   <!-- Header Section -->
   <header>
     <div class="logo">
-      <img src="res/Care logo - purplesmall.png" alt="Care Provider Logo">
+      <img src="res/Care logo - purplesmall.png" alt="On Point Care Logo">
     </div>
-    <nav>
+    <nav class="nav-links">
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="#" class="active">Home</a></li>
         <li><a href="#">Services</a></li>
-        <li><a href="#">About Us</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
         <li><a href="#">Contact</a></li>
         <li><a href="#" class="cta">Request a Callback</a></li>
       </ul>
     </nav>
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
+  
 
   <!-- Hero Banner -->
   <section class="hero">
-    <img src="res/img/Banner.jpg" alt="Care Services Banner">
     <div class="hero-text">
       <h1>Domiciliary Care Services You Can Trust</h1>
       <p>Professional and compassionate care in the comfort of your home.</p>
       <p>--</p>
-      <a href="#" class="cta">Learn More</a>
     </div>
   </section>
 
   <!-- Introduction Section -->
   <section class="introduction">
-    <div class="text">
+    <div class="introduction-image">
+      <img src="res/img/careinaction.jpg" alt="Care in Action">
+    </div>
+    <div class="introduction-overlay">
       <h2>What is Domiciliary Care?</h2>
       <p>We provide high-quality, personal care in the comfort of your own home, ensuring dignity and independence at all times.</p>
-    </div>
-    <div class="image">
-      <img src="res/img/careinaction.jpg" alt="Care in Action">
     </div>
   </section>
 
@@ -101,6 +107,6 @@
       <a href="#"><img src="./res/img/twitterico.png" alt="Twitter"></a>
     </div>
   </footer>
-
+  <script src="src/scripts.js"></script>
 </body>
 </html>

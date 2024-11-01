@@ -1,174 +1,398 @@
 /* Basic Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-  
-  /* Header Section */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  nav ul li {
-    margin: 0 10px;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .cta {
-    background-color: #BD9DE4;
-    color: white;
-    padding: 5px 20px;
-    margin-top: 10px;
-    border-radius: 15px;
-    text-decoration: none;
-  }
-  
-  /* Hero Section */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+/* Default Font Sizes */
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p, li, a {
+  font-size: 1em;
+}
+
+/* Header Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/* Active Navigation Link Styling */
+nav ul li a.active {
+  font-weight: bold;
+  text-decoration: none; /* Remove underline */
+  color: white; /* Set text color to white */
+  background-color: #BD9DE4; /* Set the highlight color */
+  padding: 8px 16px; /* Add padding for the rounded square effect */
+  border-radius: 8px; /* Make corners rounded */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 900; /* Makes the font a bit thicker */
+}
+
+/* Default Navigation Styling (Desktop) */
+.nav-links {
+  display: flex;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #333;
+  transition: 0.3s;
+}
+
+.cta {
+  background-color: #BD9DE4;
+  color: white;
+  padding: 5px 20px;
+  margin-top: 10px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  background-image: url('img/Banner.jpg'); /* Desktop background image */
+  background-size: cover;
+  background-position: center;
+  border-radius: 9px;
+  background-color: #f4f4f4; /* Fallback color to verify section */
+  min-height: 300px; /* Ensures section height is maintained */
+}
+
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  padding: 0 10px;
+  max-width: 100%;
+  text-align: center;
+}
+
+/* Introduction Section Styling */
+.introduction {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.introduction-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Overlay Styling for Mobile */
+.introduction-overlay {
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Translucent black background */
+  border-radius: 8px;
+  max-width: 90%;
+  width: 100%;
+  margin: auto;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.feature-item {
+  text-align: center;
+  max-width: 300px;
+}
+
+.feature-item img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f4f4f4;
+  padding: 40px;
+  text-align: center;
+}
+
+.testimonial-item {
+  margin-bottom: 20px;
+}
+
+.testimonial-item p {
+  font-style: italic;
+}
+
+.testimonial-item h4 {
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+/* Contact CTA Section */
+.contact-cta {
+  background-color: #BD9DE4;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.contact-cta .cta {
+  background-color: white;
+  color: #0073e6;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Footer Section */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-icons a {
+  margin: 0 10px;
+}
+
+.social-icons img {
+  max-width: 24px;
+  height: auto;
+}
+
+/* General Styling for About Us Section */
+.about-us {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.about-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.about-content h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.about-content p {
+  margin-top: 15px;
+  line-height: 1.6;
+  color: #555;
+  font-size: 1.1em;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Overlay Styling for Mobile */
+.about-overlay {
+  position: absolute;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Translucent black background */
+  border-radius: 8px;
+  max-width: 90%;
+  width: 100%;
+  margin: auto;
+}
+
+/* Responsive Font Sizes and Overlay Design for Mobile */
+@media (max-width: 768px) {
+
   .hero {
-    position: relative;
-    text-align: center;
-    color: white;
+    background-image: url('img/Banner-mobile.jpg'); /* Mobile background image */
+    height: 300px; /* Adjust as needed for mobile */
   }
-  
-  .hero img {
-    width: 100%;
-    height: auto;
+
+  /* Responsive Font Sizes */
+  body {
+      font-size: 10px; /* Decrease base font size for better readability on small screens */
   }
-  
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+
+  h1 {
+      font-size: 1.3em; /* Adjust heading size for mobile */
   }
-  
-  /* Introduction Section */
+
+  h2 {
+      font-size: 1em; /* Adjust h2 for mobile */
+  }
+
+  h3 {
+      font-size: 0.9em; /* Adjust h3 for mobile */
+  }
+
+  p, li, a {
+      font-size: 0.8em; /* Decrease paragraph, list, and link sizes slightly */
+  }
+
+  /* Hero Text for Mobile */
+  .hero-text h1 {
+      font-size: 1.8em;
+  }
+
+  .hero-text p {
+      font-size: 1em;
+  }
+
+  /* Introduction Overlay for Mobile */
   .introduction {
-    display: flex;
-    justify-content: space-around;
+      display: block;
+      padding: 0;
+  }
+
+  .introduction-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 15px;
+  }
+
+  /* About Overlay for Mobile */
+  .about-us {
+      display: block;
+      padding: 0;
+  }
+
+  .about-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 15px;
+  }
+
+   /* Hide nav links by default and display the burger icon */
+   /* Hide nav links by default and display the burger icon */
+   .nav-links {
+    position: fixed;
+    right: 0;
+    top: 20%;
+    height: 70vh;
+    width: 0;
+    background-color: rgba(244, 244, 244, 0.95); /* Slightly translucent background */
+    flex-direction: column;
     align-items: center;
-    padding: 40px;
-  }
-  
-  .introduction .text {
-    flex: 1;
-    padding: 20px;
-  }
-  
-  .introduction .image {
-    flex: 1;
-    text-align: center;
-  }
-  
-  .introduction img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  /* Features Section */
-  .features {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
-  
-  .feature-item {
-    text-align: center;
-    max-width: 300px;
-  }
-  
-  .feature-item img {
-    max-width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  
-  /* Testimonials Section */
-  .testimonials {
-    background-color: #f4f4f4;
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .testimonial-item {
-    margin-bottom: 20px;
-  }
-  
-  .testimonial-item p {
-    font-style: italic;
-  }
-  
-  .testimonial-item h4 {
-    margin-top: 10px;
-    font-weight: normal;
-  }
-  
-  /* Contact CTA Section */
-  .contact-cta {
-    background-color: #BD9DE4;
-    color: white;
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .contact-cta .cta {
-    background-color: white;
-    color: #0073e6;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-  }
-  
-  /* Footer Section */
-  footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  footer ul {
+    justify-content: center;
+    z-index: 1000; /* Bring menu above other content */
+    overflow: hidden;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Style the nav links as a vertical list */
+.nav-links ul {
     list-style: none;
-  }
-  
-  footer ul li {
-    display: inline;
-    margin: 0 10px;
-  }
-  
-  footer ul li a {
-    color: white;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.nav-links ul li {
+    margin: 20px 0; /* Space out links vertically */
+    width: 100%;
+}
+
+.nav-links a {
+    font-size: 1.5em;
+    color: #333;
     text-decoration: none;
-  }
-  
-  .social-icons a {
-    margin: 0 10px;
-  }
-  
-  .social-icons img {
-    max-width: 24px;
-    height: auto;
-  }
-  
+    display: block; /* Ensure links take full width */
+    width: 100%;
+    padding: 10px 0;
+}
+
+/* Display burger icon on mobile */
+.burger {
+    display: block;
+}
+
+/* Show nav links when .nav-active is added */
+.nav-active {
+    width: 100%; /* Full screen width for the menu */
+}
+
+
+}
