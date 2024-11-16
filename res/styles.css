@@ -135,6 +135,74 @@ nav ul li a {
   border-radius: 10px;
 }
 
+/* Services Section */
+.services {
+  position: relative;
+  padding: 40px;
+  background-color: #f9f9f9; /* Light background color */
+  text-align: center;
+}
+
+.services-overlay {
+  display: flex; /* Use flexbox for side-by-side layout */
+  align-items: center; /* Align content vertically */
+  justify-content: space-between; /* Space items evenly */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Translucent white background */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 1200px; /* Limit overall width */
+  margin: 0 auto; /* Center the card */
+}
+
+/* Image Styling */
+.services-image {
+  flex: 1; /* Allow image section to take equal space */
+  text-align: center;
+}
+
+.services-image img {
+  max-width: 100%; /* Ensure image doesn't overflow */
+  height: auto;
+  border-radius: 8px; /* Match the card's border radius */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
+}
+
+/* Text and List Styling */
+.services-content {
+  flex: 2; /* Allow text section to take more space */
+  padding: 20px;
+  text-align: left; /* Align text to the left */
+}
+
+.services-content h1 {
+  font-size: 2em;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.services-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services-content ul li {
+  font-size: 1.2em;
+  color: #555;
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.services-content ul li::before {
+  content: "•"; /* Add a bullet point */
+  position: absolute;
+  left: 0;
+  color: #BD9DE4; /* Highlight color */
+  font-size: 1.5em;
+  line-height: 1;
+}
+
 /* Overlay Styling for Mobile */
 .introduction-overlay {
   position: absolute;
@@ -275,8 +343,9 @@ footer ul li a {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.6); /* Translucent black background */
   border-radius: 8px;
-  max-width: 90%;
+  max-width: 50%;
   width: 100%;
+  font-size: 22px;
   margin: auto;
 }
 
@@ -348,9 +417,24 @@ footer ul li a {
   .about-overlay {
       position: absolute;
       top: 50%;
+      width: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       padding: 15px;
+      font-size: 13px;
+  }
+
+  .services-overlay {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .services-image {
+    margin-bottom: 20px;
+  }
+
+  .services-content {
+    padding: 10px;
   }
 
    /* Hide nav links by default and display the burger icon */
